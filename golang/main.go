@@ -19,7 +19,10 @@ func main() {
 }
 
 func getHello(w http.ResponseWriter, r *http.Request) {
-	io.WriteString(w, "Hello, from Golang")
+	_, err := io.WriteString(w, "Hello, from Golang")
+	if err != nil {
+		return
+	}
 
 }
 
@@ -30,5 +33,8 @@ func getComplex(w http.ResponseWriter, r *http.Request) {
 		sum += i
 	}
 
-	io.WriteString(w, fmt.Sprintf("%d", sum))
+	_, err := io.WriteString(w, fmt.Sprintf("Complex calculation result: %d", sum))
+	if err != nil {
+		return
+	}
 }
