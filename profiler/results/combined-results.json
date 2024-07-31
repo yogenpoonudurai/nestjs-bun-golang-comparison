@@ -1,0 +1,211 @@
+{
+    "metrics": {
+        "http_req_failed": {
+            "passes": 0,
+            "fails": 105060,
+            "thresholds": {
+                "rate<0.01": false
+            },
+            "value": 0
+        },
+        "dropped_iterations": {
+            "count": 43333,
+            "rate": 119.37218697794039
+        },
+        "iteration_duration": {
+            "p(90)": 3008.5437173,
+            "p(95)": 3019.1129535,
+            "avg": 3008.0685181051135,
+            "min": 3001.795,
+            "med": 3004.5658955,
+            "max": 3225.100875
+        },
+        "checks": {
+            "passes": 210120,
+            "fails": 0,
+            "value": 1
+        },
+        "errors": {
+            "count": 0,
+            "rate": 0,
+            "thresholds": {
+                "rate<0.05": false
+            }
+        },
+        "http_req_receiving": {
+            "avg": 0.02685241766609662,
+            "min": 0.003,
+            "med": 0.016,
+            "max": 105.158,
+            "p(90)": 0.043,
+            "p(95)": 0.056
+        },
+        "http_req_duration{expected_response:true}": {
+            "min": 0.334,
+            "med": 1.107,
+            "max": 187.565,
+            "p(90)": 2.3021000000000025,
+            "p(95)": 2.953,
+            "avg": 1.8814988387588423
+        },
+        "data_sent": {
+            "count": 9140220,
+            "rate": 25179.148705594125
+        },
+        "iterations": {
+            "rate": 96.47183412105029,
+            "count": 35020
+        },
+        "http_reqs": {
+            "count": 105060,
+            "rate": 289.4155023631509
+        },
+        "http_req_blocked": {
+            "med": 0.002,
+            "max": 32.15,
+            "p(90)": 0.006,
+            "p(95)": 0.007,
+            "avg": 0.008079773462772473,
+            "min": 0
+        },
+        "http_req_connecting": {
+            "p(90)": 0,
+            "p(95)": 0,
+            "avg": 0.003559366076527698,
+            "min": 0,
+            "med": 0,
+            "max": 10.807
+        },
+        "http_req_tls_handshaking": {
+            "avg": 0,
+            "min": 0,
+            "med": 0,
+            "max": 0,
+            "p(90)": 0,
+            "p(95)": 0
+        },
+        "vus_max": {
+            "value": 310,
+            "min": 110,
+            "max": 310
+        },
+        "data_received": {
+            "count": 19366060,
+            "rate": 53348.92426894081
+        },
+        "http_req_waiting": {
+            "avg": 1.8310299067199831,
+            "min": 0.326,
+            "med": 1.068,
+            "max": 187.541,
+            "p(90)": 2.249,
+            "p(95)": 2.887
+        },
+        "vus": {
+            "max": 300,
+            "value": 2,
+            "min": 2
+        },
+        "group_duration": {
+            "avg": 1002.6503601538479,
+            "min": 1000.377583,
+            "med": 1001.407625,
+            "max": 1201.61275,
+            "p(90)": 1002.8617131,
+            "p(95)": 1003.9435523999999
+        },
+        "http_req_sending": {
+            "med": 0.007,
+            "max": 96.527,
+            "p(90)": 0.022,
+            "p(95)": 0.028,
+            "avg": 0.023616514372739008,
+            "min": 0.001
+        },
+        "http_req_duration": {
+            "max": 187.565,
+            "p(90)": 2.3021000000000025,
+            "p(95)": 2.953,
+            "avg": 1.8814988387588423,
+            "min": 0.334,
+            "med": 1.107,
+            "thresholds": {
+                "p(95)<500": false
+            }
+        }
+    },
+    "root_group": {
+        "name": "",
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {
+            "Bun Tests": {
+                "id": "ace0e61217aaa600c8b2bf91e174ce44",
+                "groups": {},
+                "checks": {
+                        "status is 200": {
+                            "name": "status is 200",
+                            "path": "::Bun Tests::status is 200",
+                            "id": "a09118ce6c6bec961c00deb3179f20a8",
+                            "passes": 35020,
+                            "fails": 0
+                        },
+                        "response time < 200ms": {
+                            "passes": 35020,
+                            "fails": 0,
+                            "name": "response time < 200ms",
+                            "path": "::Bun Tests::response time < 200ms",
+                            "id": "3e8fecf80c46f9224c2046b0a63e8ab7"
+                        }
+                    },
+                "name": "Bun Tests",
+                "path": "::Bun Tests"
+            },
+            "NestJS Tests": {
+                "name": "NestJS Tests",
+                "path": "::NestJS Tests",
+                "id": "9a8cff38771ad43edad39d94ccddd7c6",
+                "groups": {},
+                "checks": {
+                        "status is 200": {
+                            "passes": 35020,
+                            "fails": 0,
+                            "name": "status is 200",
+                            "path": "::NestJS Tests::status is 200",
+                            "id": "5b48c2babec5b70359318ce67a33c589"
+                        },
+                        "response time < 200ms": {
+                            "fails": 0,
+                            "name": "response time < 200ms",
+                            "path": "::NestJS Tests::response time < 200ms",
+                            "id": "84e8af792cb85a1bf7cec1984ebd0d35",
+                            "passes": 35020
+                        }
+                    }
+            },
+            "Golang Tests": {
+                "id": "f10da55ffe052756b4d43579c2e4c75b",
+                "groups": {},
+                "checks": {
+                        "status is 200": {
+                            "fails": 0,
+                            "name": "status is 200",
+                            "path": "::Golang Tests::status is 200",
+                            "id": "36fce773f2f5ac579a37505cf6ce62df",
+                            "passes": 35020
+                        },
+                        "response time < 200ms": {
+                            "id": "deade0f285a8a0ea2fb568d048bfef22",
+                            "passes": 35020,
+                            "fails": 0,
+                            "name": "response time < 200ms",
+                            "path": "::Golang Tests::response time < 200ms"
+                        }
+                    },
+                "name": "Golang Tests",
+                "path": "::Golang Tests"
+            }
+        },
+        "checks": {}
+    }
+}
