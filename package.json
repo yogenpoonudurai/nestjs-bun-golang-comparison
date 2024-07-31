@@ -6,7 +6,7 @@
     "start-nest": "cd nestjs && npm run start",
     "start-bun": "cd bun && bun run index.ts",
     "start-nest-bun": "cd nestjs-bun && npm run start:prod",
-    "start:all": "concurrently --kill-others \"npm run start-golang\" \"npm run start-nest\" \"npm run start-bun\"",
+    "start:all": "concurrently --kill-others \"npm run start-golang\" \"npm run start-nest\" \"npm run start-bun\" \"npm run start-nest-bun\"",
     "test:bun": "k6 run --summary-export=profiler/results/bun-results.json profiler/bun-load-test.js",
     "test:nest": "k6 run --summary-export=profiler/results/nest-results.json profiler/nest-load-test.js",
     "test:golang": "k6 run --summary-export=profiler/results/golang-results.json profiler/golang-load-test.js",
