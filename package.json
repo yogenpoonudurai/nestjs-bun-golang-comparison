@@ -13,7 +13,7 @@
     "test:golang": "k6 run --summary-export=profiler/results/golang-results.json profiler/golang-load-test.js",
     "test:nestBun": "k6 run --summary-export=profiler/results/nestBun-results.json profiler/nest-bun-load-test.js",
     "test:rust": "k6 run --summary-export=profiler/results/rust-results.json profiler/rust-load-test.js",
-    "test:all": "npm run test:rust && npm run test:golang",
+    "test:all": "npm run test:bun && npm run test:nest && npm run test:rust && npm run test:golang",
     "analyze": "node profiler/analyze.js profiler/results/bun-results.json profiler/results/nest-results.json profiler/results/golang-results.json profiler/results/nestBun-results.json profiler/results/rust-results.json \n\n\n"
   },
   "author": "",
